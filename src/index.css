@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top,
+      #3b185a 0%,
+      #1c0b2c 40%,
+      #08030d 100%);
+  color: #fff;
+}
+
+.invite-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 15px;
+}
+
+.audio-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.3rem;
+  background: rgba(255, 255, 255, .08);
+  backdrop-filter: blur(10px);
+  color: white;
+  z-index: 999;
+}
+
+.invite-card {
+  width: 100%;
+  max-width: 650px;
+  min-height: 760px;
+  position: relative;
+  overflow: hidden;
+
+  background: rgba(30, 15, 45, 0.85);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 216, 117, .2);
+  border-radius: 0;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, .5),
+    0 0 40px rgba(255, 216, 117, .15);
+
+  animation: cardReveal 1s ease;
+}
+
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.archway-frame-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hanging-flowers-img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+@keyframes sway {
+  from {
+    transform: rotate(-2deg);
+  }
+
+  to {
+    transform: rotate(2deg);
+  }
+}
+
+.floating-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffd875;
+  opacity: .6;
+  animation: float 12s linear infinite;
+}
+
+.particle:nth-child(odd) {
+  left: 20%;
+}
+
+.particle:nth-child(even) {
+  left: 80%;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.invite-content {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  padding: 170px 30px 20px;
+}
+
+.monogram {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 216, 117, .4);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  margin: auto auto 12px;
+
+  color: #ffd875;
+  font-size: 1.6rem;
+  font-family: 'Cinzel', serif;
+}
+
+.section-title {
+  color: #ffd875;
+  letter-spacing: 5px;
+  font-size: .9rem;
+  margin-bottom: 6px;
+}
+
+.invite-subtitle {
+  color: #ddd;
+  margin-bottom: 8px;
+}
+
+.wedding-quote {
+  font-style: italic;
+  color: #cfc2df;
+  font-size: .85rem;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.bride-groom-names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  line-height: 1.25;
+  padding: 5px 20px;
+  margin: 0;
+
+  background:
+    linear-gradient(135deg,
+      #fff4c2,
+      #ffd875,
+      #d4af37);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ampersand {
+  display: block;
+  font-size: 2rem;
+}
+
+.ornament-divider {
+  color: #ffd875;
+  margin: 12px 0;
+  letter-spacing: 10px;
+}
+
+.datetime-details {
+  margin-top: 10px;
+}
+
+.wedding-date {
+  color: #ffd875;
+  letter-spacing: 2px;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 6px;
+}
+
+.wedding-venue {
+  color: #e6dff2;
+  line-height: 1.5;
+}
+
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn {
+  padding: 14px;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background:
+    linear-gradient(135deg,
+      #ffd875,
+      #d4af37);
+
+  color: #220d34;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, .08);
+  color: white;
+}
+
+.couple-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.wedding-couple-img {
+  width: 80%;
+  max-height: 240px;
+  object-fit: contain;
+}
+
+.countdown-panel {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 650px;
+}
+
+.countdown-title {
+  text-align: center;
+  margin-bottom: 15px;
+  letter-spacing: 3px;
+  color: #ddd;
+}
+
+.countdown-timer {
+  display: flex;
+  gap: 10px;
+}
+
+.time-block {
+  flex: 1;
+  text-align: center;
+  padding: 15px 10px;
+
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid rgba(255, 216, 117, .15);
+
+  border-radius: 20px;
+}
+
+.time-number {
+  font-size: 1.8rem;
+  color: #ffd875;
+  font-weight: bold;
+}
+
+.time-label {
+  font-size: .7rem;
+  letter-spacing: 1px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, .7);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 25px;
+}
+
+.glassmorphism {
+  background: rgba(30, 15, 45, .85);
+  backdrop-filter: blur(25px);
+}
+
+.modal-close {
+  float: right;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.rsvp-form input,
+.rsvp-form textarea {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+}
+
+.form-title {
+  text-align: center;
+  color: #ffd875;
+  margin-bottom: 10px;
+}
+
+.rsvp-thankyou {
+  text-align: center;
+  padding: 20px;
+}
+
+@media(max-width:480px) {
+
+  .invite-card {
+    min-height: 700px;
+  }
+
+  .bride-groom-names {
+    font-size: 3rem;
+  }
+
+  .countdown-timer {
+    flex-wrap: wrap;
+  }
+}
+
+/* From Uiverse.io by reglobby */ 
+.user-profile {
+  width: 131px;
+  height: 51px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background: linear-gradient(
+    to bottom right,
+    #2e8eff 0%,
+    rgba(46, 142, 255, 0) 30%
+  );
+  background-color: rgba(46, 142, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.user-profile:hover,
+.user-profile:focus {
+  background-color: rgba(46, 142, 255, 0.7);
+  box-shadow: 0 0 10px rgba(46, 142, 255, 0.5);
+  outline: none;
+}
+
+.user-profile-inner {
+  width: 127px;
+  height: 47px;
+  border-radius: 13px;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.68rem; /* slightly small text size to fit text inside 127px */
+}
+
+.user-profile-inner svg {
+  width: 27px;
+  height: 27px;
+  fill: #fff;
+}
+
+/* App Viewport & Page Transitions */
+.app-viewport {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.page-transition-enter {
+  animation: slideUpEnter 1.2s cubic-bezier(0.85, 0, 0.15, 1) both;
+}
+
+@keyframes slideUpEnter {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Landing Open Page */
+.open-page-container {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1.2s cubic-bezier(0.85, 0, 0.15, 1), opacity 1.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.open-page-container.leaving {
+  transform: translateY(-100%);
+  opacity: 0.9;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.open-page-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, 
+    rgba(28, 8, 44, 0.7) 0%, 
+    rgba(10, 3, 18, 0.85) 50%, 
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  z-index: 2;
+}
+
+.open-page-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  max-width: 600px;
+  width: 90%;
+  animation: cardReveal 1.2s ease;
+}
+
+.open-page-monogram {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 216, 117, .4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 20px;
+  color: #ffd875;
+  font-size: 1.6rem;
+  font-family: 'Cinzel', serif;
+  animation: sway 4s ease-in-out infinite alternate;
+}
+
+.open-page-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  letter-spacing: 5px;
+  color: #ffd875;
+  margin-bottom: 15px;
+}
+
+.open-page-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: #e1d3f0;
+  margin-bottom: 15px;
+  max-width: 90%;
+  line-height: 1.6;
+}
+
+.open-page-couple {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #fff4c2, #ffd875, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ampersand-gold {
+  display: block;
+  font-size: 2.2rem;
+  margin: 5px 0;
+  color: #ffd875;
+  -webkit-text-fill-color: initial;
+}
+
+.ornament-divider-gold {
+  color: #ffd875;
+  letter-spacing: 8px;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+/* Violet Animated Button */
+.open-btn-violet {
+  position: relative;
+  background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 16px 45px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: pulseViolet 2s infinite, floatBtn 4s ease-in-out infinite;
+  z-index: 4;
+}
+
+.open-btn-violet:hover {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.8), inset 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.open-btn-violet:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.6);
+}
+
+@keyframes pulseViolet {
+  0% {
+    box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.7), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(124, 58, 237, 0), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(124, 58, 237, 0), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+}
+
+@keyframes floatBtn {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media(max-width: 480px) {
+  .open-page-couple {
+    font-size: 3.2rem;
+  }
+  .open-btn-violet {
+    padding: 14px 35px;
+    font-size: 0.95rem;
+  }
+}
