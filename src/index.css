@@ -139,7 +139,7 @@ body {
   position: relative;
   z-index: 5;
   text-align: center;
-  padding: 170px 30px 20px;
+  padding: 240px 30px 20px;
 }
 
 .monogram {
@@ -303,8 +303,8 @@ body {
   text-align: center;
   padding: 15px 10px;
 
-  background: rgba(255, 255, 255, .05);
-  border: 1px solid rgba(255, 216, 117, .15);
+  background: transparent;
+  border: none;
 
   border-radius: 20px;
 }
@@ -389,6 +389,7 @@ body {
     width: 100%;
     max-width: none;
     min-height: 700px;
+    margin-top: 0;
   }
 
   .bride-groom-names {
@@ -403,7 +404,7 @@ body {
 .user-profile {
   width: auto;
   min-width: 168px;
-  min-height: 48px;
+  min-height: 36px;
   border-radius: 999px;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;

@@ -117,7 +117,7 @@ export default function Engage() {
             <span>S</span>
           </div>
 
-          <p className="section-title">
+          <p className="section-title" style={{ marginTop: "10px" }}>
             ENGAGEMENT INVITATION
           </p>
 
@@ -164,16 +164,26 @@ export default function Engage() {
                 📅 Save The Date
               </div>
             </a>
+            <a
+              href="https://www.google.com/maps/place/10%C2%B038'32.6%22N+77%C2%B015'56.1%22E/@10.6423756,77.2630186,17z/data=!3m1!4b1!4m4!3m3!8m2!3d10.6423756!4d77.2655935?hl=en&entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noreferrer"
+              className="user-profile"
+            >
+              <div className="user-profile-inner">
+                📍 Location
+              </div>
+            </a>
           </div>
         </div>
+      </div>
 
-        <div className="couple-container">
-          <img
-            src={weddingCouple}
-            alt="Couple"
-            className="wedding-couple-img"
-          />
-        </div>
+      <div className="couple-container">
+        <img
+          src={weddingCouple}
+          alt="Couple"
+          className="wedding-couple-img"
+        />
       </div>
 
       <div className="countdown-panel">
