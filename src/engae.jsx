@@ -142,7 +142,7 @@ export default function Engage() {
 
           <div className="datetime-details">
             <p className="wedding-date">
-              WEDNESDAY • JUNE 24 • 2026
+             ✦ ANNOUNCE SOON ✦
             </p>
 
             <p className="wedding-venue">
